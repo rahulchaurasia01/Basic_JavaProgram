@@ -378,9 +378,9 @@ public class Utils {
 	 */
 	public double fahrenheitToCelsius(double fahrenheit) {
 		
-		final int constantCelsius = 32;
-		final double constantFahrenheit = 5/9;
-		
+		final double constantCelsius = 32;
+		final double constantFahrenheit = 0.55556;
+				
 		double result = (fahrenheit - constantCelsius) * constantFahrenheit;
 		
 		return result;
@@ -389,11 +389,43 @@ public class Utils {
 	
 	
 	
+	/**
+	 * Purpose:- Conversion from Celsius to Fahrenheit
+	 * 
+	 * @param celsius
+	 * @return result
+	 */
+	public double celsiusToFahrenheit(double celsius) {
+		
+		final double constantCelsius = 32;
+		final double constantFahrenheit = 0.55556;
+		
+		double result = (celsius * constantFahrenheit) + constantCelsius;
+		
+		return result;
+		
+	}
 	
 	
 	
-	
-	
+	/**
+	 * Purpose:- Calculate Monthly Emi for car loan
+	 * 
+	 * @param principal
+	 * @param year
+	 * @param interest
+	 * @return payment
+	 */
+	public double calculateCarLoanEmi(int principal, int year, double interest) {
+		
+		int n = 12 * year;
+		
+		double r = interest/(12*100);
+		
+		double payment = principal*r/(1-(Math.pow(1+r, -n)));
+		
+		return payment;
+	}
 	
 	
 	
