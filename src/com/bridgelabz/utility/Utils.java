@@ -429,6 +429,26 @@ public class Utils {
 	
 	
 	
+	/**
+	 * Purpose:- Performing various trignometric function.
+	 * 
+	 * @param degree
+	 */
+	public void trigoFunction(float degree) {
+		
+		float radian;
+		
+		radian = (float) Math.toRadians(degree);
+		System.out.println("The above angle " + degree + " in radian is:- "+radian);
+		
+		System.out.println("sin:- "+Math.sin(degree));
+		
+		System.out.println("cos:- "+Math.cos(degree));
+		
+	}
+	
+	
+	
 	
 	
 	
